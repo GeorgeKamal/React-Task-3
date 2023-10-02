@@ -41,7 +41,7 @@ function Navbar(props) {
           </div>
           <ul className="navbar-nav col-lg-6 justify-content-evenly">
             <li className="d-flex justify-content-center nav-item">
-              <ButtonRouter name="Dashboard" link="/Dashboard" />
+              <ButtonRouter name="Dashboard" link="Dashboard" />
             </li>
             <li className="d-flex justify-content-center nav-item">
               <ButtonRouter name="Home" link="/" />

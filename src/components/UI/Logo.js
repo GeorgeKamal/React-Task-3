@@ -9,7 +9,7 @@ function Logo(props) {
   }
 
   return (
-    <a className="navbar-brand" href="" onClick={navigationHandler}>
+    <a className="navbar-brand pointer" onClick={navigationHandler}>
       <img src={logo} alt="logo" className="img-fluid" />
     </a>
   );

@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route index element={<Furino />} />
         <Route
-          path="dashboard"
+          path="/dashboard"
           element={
             <ProductProvider>
               <Dashboard />
