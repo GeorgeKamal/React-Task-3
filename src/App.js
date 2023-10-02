@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   createBrowserRouter,
+  HashRouter,
 } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Section/Navbar";
@@ -12,7 +13,7 @@ import ProductProvider from "./store/ProductProvider";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route index element={<Furino />} />
@@ -25,7 +26,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
