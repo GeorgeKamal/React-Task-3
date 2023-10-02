@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/React-Task-3/static/css/main.609beae9.css",
+    "main.js": "/React-Task-3/static/js/main.88fd5693.js",
+    "static/js/787.c3321d7f.chunk.js": "/React-Task-3/static/js/787.c3321d7f.chunk.js",
+    "static/media/background.png": "/React-Task-3/static/media/background.cd79c1da25f682a8de19.png",
+    "static/media/bed.png": "/React-Task-3/static/media/bed.56a0baa8f3360e43db2d.png",
+    "static/media/img7.png": "/React-Task-3/static/media/img7.eb9532874752132d7c01.png",
+    "static/media/living.png": "/React-Task-3/static/media/living.9e830c5dc316fb166dde.png",
+    "static/media/dining.png": "/React-Task-3/static/media/dining.099610650a4a43ade535.png",
+    "static/media/img6.png": "/React-Task-3/static/media/img6.bd7f343f248afd66e549.png",
+    "static/media/room1.png": "/React-Task-3/static/media/room1.55355d38f0474f11d275.png",
+    "static/media/room2.png": "/React-Task-3/static/media/room2.ff9df5d097063d7400c7.png",
+    "static/media/img5.png": "/React-Task-3/static/media/img5.177afefdf8f8caac07d1.png",
+    "static/media/img2.png": "/React-Task-3/static/media/img2.a3c3e98875b7dfe36b77.png",
+    "static/media/img9.png": "/React-Task-3/static/media/img9.bc7a3aa5230bb03bf1cb.png",
+    "static/media/img4.png": "/React-Task-3/static/media/img4.91055ddc455519fcae42.png",
+    "static/media/img3.png": "/React-Task-3/static/media/img3.ad9003e7171a8acea2df.png",
+    "static/media/img1.png": "/React-Task-3/static/media/img1.ceeee501a16dc708a797.png",
+    "static/media/img8.png": "/React-Task-3/static/media/img8.a8f7e8f1f525d74a9af5.png",
+    "index.html": "/React-Task-3/index.html",
+    "main.609beae9.css.map": "/React-Task-3/static/css/main.609beae9.css.map",
+    "main.88fd5693.js.map": "/React-Task-3/static/js/main.88fd5693.js.map",
+    "787.c3321d7f.chunk.js.map": "/React-Task-3/static/js/787.c3321d7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.609beae9.css",
+    "static/js/main.88fd5693.js"
+  ]
+}
