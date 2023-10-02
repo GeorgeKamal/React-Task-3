@@ -1,0 +1,9 @@
+.header-row {
+  background-color: #b88e2f;
+  color: #ffffff;
+  /* text-align: left; */
+}
+
+.header-item {
+  padding: 12px 15px;
+}

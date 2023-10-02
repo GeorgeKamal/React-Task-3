@@ -1,0 +1,24 @@
+.cell-item {
+  padding: 10px 2px;
+  /* max-width: 2rem;
+  overflow: auto; */
+}
+
+.cell-row {
+  border-bottom: 1px solid #dddddd;
+}
+
+.cell-row:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.cell-row:last-of-type {
+  border-bottom: 2px solid #b88e2f;
+}
+
+.cell-row.active-row,
+.cell-row:hover {
+  font-weight: bold;
+  color: #b88e2f;
+  border: 2px solid #b88e2f;
+}
