@@ -11,7 +11,7 @@ function ButtonRouter(props) {
     <a
       className="navbar-brand normal-poppins bold-underlined"
       style={props.style}
-      href={props.link}
+      href=""
       onClick={navigationHandler}
     >
       {props.name}
