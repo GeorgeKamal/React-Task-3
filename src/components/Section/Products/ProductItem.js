@@ -55,7 +55,7 @@ function ProductItem(props) {
             {props.item.discount ? discountPrice : price}
             {props.item.discount && (
               <strike className="card-price-old-poppins">
-                {discountPrice}
+                {price}
               </strike>
             )}
           </h6>
