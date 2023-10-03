@@ -12,9 +12,16 @@ npm run deploy
       throw new Error("Missing Arguments");
     }
 
+    console.log('%cExecuting git add', 'color: yellow');
     execSync(`git add ${process.argv[2]}`);
+
+    console.log('%cExecuting git commit', 'color: yellow');
     execSync(`git commit -m "${process.argv[3]}"`);
+
+    console.log('%cExecuting git push', 'color: yellow');
     execSync("git push");
+
+    console.log('%cExecuting deploy script', 'color: yellow');
     execSync("npm run deploy");
     
   } catch (error) {
