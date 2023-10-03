@@ -29,7 +29,9 @@ function ProductForm(props) {
     nameBlurHandler,
     nameReset,
   ] = useInput(validateText);
-  const [alt, setAlt] = useState(productToBeEdited ? productToBeEdited["Alt Name"] : "");
+  const [alt, setAlt] = useState(
+    productToBeEdited ? productToBeEdited["Alt Name"] : ""
+  );
   const [
     description,
     setDescription,
@@ -48,7 +50,9 @@ function ProductForm(props) {
     priceBlurHandler,
     priceReset,
   ] = useInput((price) => price >= 1);
-  const [isNew, setIsNew] = useState(productToBeEdited ? productToBeEdited.New : "false");
+  const [isNew, setIsNew] = useState(
+    productToBeEdited ? productToBeEdited.New : "false"
+  );
   const [
     discount,
     setDiscount,
@@ -57,7 +61,9 @@ function ProductForm(props) {
     discountChangeHandler,
     discountBlurHandler,
     discountReset,
-  ] = useInput((discount) => 1 <= parseFloat(discount) && parseFloat(discount) < 100);
+  ] = useInput(
+    (discount) => 1 <= parseFloat(discount) && parseFloat(discount) < 100
+  );
   const [imageState, setImageState] = useState({
     image: productToBeEdited ? productToBeEdited.Image : "",
     valid: true,
@@ -110,6 +116,7 @@ function ProductForm(props) {
     }
 
     if (productToBeEdited) {
+      product = { ...product, alt: alt };
       props.onEdit(product);
     } else {
       props.onAdd(product);
@@ -146,7 +153,7 @@ function ProductForm(props) {
   };
 
   return (
-    <form id="form">
+    <form id="form" className={classes.form}>
       <Input
         className={`${nameError && classes.invalid}`}
         name="Name"

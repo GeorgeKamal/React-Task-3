@@ -8,7 +8,7 @@ function Backdrop(props) {
 
 function Overlay(props) {
   return (
-    <div className={classes.modal}>
+    <div className={`${classes.modal} ${props.noForm && classes["no-form"]}`}>
       <div className={classes.content}>{props.children}</div>
     </div>
   );
@@ -17,7 +17,7 @@ function Overlay(props) {
 function Modal(props) {
   return <>
     {ReactDOM.createPortal(<Backdrop onClick={props.onClick}/>, document.getElementById("overlay"))}
-    {ReactDOM.createPortal(<Overlay>{props.children}</Overlay>, document.getElementById("overlay"))}
+    {ReactDOM.createPortal(<Overlay noForm={props.noForm}>{props.children}</Overlay>, document.getElementById("overlay"))}
   </>;
 }
 

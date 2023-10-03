@@ -10,6 +10,9 @@ import axios from "axios";
 
 function Dashboard(props) {
   const [adding, setAdding] = useState(false);
+  const [submitted, setSubmitted] = useState();
+  const [edited, setEdited] = useState(false);
+
   const addHandler = () => {
     setAdding((previousState) => !previousState);
   };
@@ -47,6 +50,7 @@ function Dashboard(props) {
         //   ...previousState.products,
         // }));
         console.log("response", response);
+        setSubmitted(response.data.name);
         fetchProducts();
       } catch (error) {
         console.error(error);
@@ -66,6 +70,7 @@ function Dashboard(props) {
           data
         );
         console.log("response", response);
+        setEdited(true);
         fetchProducts();
       } catch (error) {
         console.error(error);
@@ -100,6 +105,30 @@ function Dashboard(props) {
       {adding && (
         <Modal onClick={addHandler}>
           <ProductForm onClick={addHandler} onAdd={addProductHandler} />
+        </Modal>
+      )}
+      {submitted && (
+        <Modal noForm onClick={addHandler}>
+          <p>Product Submitted Successfully with ID: {submitted}</p>
+          <div className="container text-end">
+            <Button
+              onClick={setSubmitted.bind(null, undefined)}
+              className="mx-2"
+              text="Ok"
+            />
+          </div>
+        </Modal>
+      )}
+      {edited && (
+        <Modal noForm onClick={setEdited.bind(null, false)}>
+          <p>Product Edited Successfully</p>
+          <div className="container text-end">
+            <Button
+              onClick={setEdited.bind(null, false)}
+              className="mx-2"
+              text="Ok"
+            />
+          </div>
         </Modal>
       )}
       <div className="container-fluid px-5 pb-5">
