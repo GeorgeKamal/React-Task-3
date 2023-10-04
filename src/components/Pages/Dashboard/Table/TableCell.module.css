@@ -20,5 +20,5 @@
 .cell-row:hover {
   font-weight: bold;
   color: #b88e2f;
-  border: 2px solid #b88e2f;
+  /* border: 2px solid #b88e2f; */
 }
