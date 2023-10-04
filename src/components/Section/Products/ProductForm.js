@@ -228,7 +228,7 @@ function ProductForm(props) {
       <Input
         name="Discount"
         input={{
-          placeholder: "Discount",
+          placeholder: "Discount Percentage (1-99)",
           type: "number",
           min: 1,
           step: 1,

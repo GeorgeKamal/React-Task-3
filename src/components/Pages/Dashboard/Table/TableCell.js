@@ -5,6 +5,7 @@ import classes from "./TableCell.module.css";
 import ProductContext from "../../../../store/product-context";
 import Modal from "../../../UI/Overlays/Modal";
 import ProductForm from "../../../Section/Products/ProductForm";
+import Icon from "../../../UI/Icon";
 
 function TableCell(props) {
   // const context = useContext(ProductContext);
@@ -19,7 +20,16 @@ function TableCell(props) {
     <td key={`cell${props.rowNumber}${index}`} className={classes["cell-item"]}>
       {props.content[key] &&
         !props.content[key].toString().startsWith("data:image/png;base64,") &&
+        key !== "New" &&
         props.content[key]}
+      {props.content[key] &&
+        !props.content[key].toString().startsWith("data:image/png;base64,") &&
+        key === "New" && (
+          <Icon
+            iconName="bi bi-check-square-fill"
+            style={{ color: "#b88e2f" }}
+          />
+        )}
       {props.content[key] &&
         props.content[key].toString().startsWith("data:image/png;base64,") && (
           <img src={props.content[key]} className="img-fluid w-100" />
