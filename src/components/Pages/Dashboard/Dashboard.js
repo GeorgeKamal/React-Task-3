@@ -9,6 +9,7 @@ import Modal from "../../UI/Overlays/Modal";
 import axios from "axios";
 
 function Dashboard(props) {
+  document.title = "Dashboard";
   const [adding, setAdding] = useState(false);
   const [submitted, setSubmitted] = useState();
   const [edited, setEdited] = useState(false);

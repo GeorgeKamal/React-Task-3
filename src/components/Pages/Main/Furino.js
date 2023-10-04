@@ -8,6 +8,7 @@ import Browse from "../../Section/Browse";
 import classes from "./Furino.module.css";
 
 function Furino(props) {
+  document.title = "Furino";
   return (
     <div className={classes.furino}>
       <Main />
