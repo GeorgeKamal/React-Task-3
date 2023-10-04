@@ -7,7 +7,7 @@ import ButtonRouter from "../UI/Buttons/ButtonRouter"
 
 function Navbar(props) {
   return (
-    <nav className={`navbar navbar-expand-lg bg-body-white rounded ${classes["disable-scroll"]}`}>
+    <nav className={`navbar navbar-expand-lg bg-body-white rounded ${classes.navbar} ${classes["disable-scroll"]}`}>
       <div className="container-lg p-1 justify-content-around">
         <div className="d-flex d-lg-none col-5 col-lg-6 justify-content-start">
           <Logo />
