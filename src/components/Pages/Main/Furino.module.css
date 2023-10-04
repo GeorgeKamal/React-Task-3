@@ -1,5 +1,5 @@
 .furino {
-  height: 90vh;
+  height: 85vh;
   overflow-y: auto;
 }
 .furino::-webkit-scrollbar {
