@@ -1,6 +1,9 @@
 body {
   font-family: "Poppins";
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .pointer:hover {
   cursor: pointer;
 }
