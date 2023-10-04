@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Task-3/static/css/main.7414e7e1.css",
-    "main.js": "/React-Task-3/static/js/main.b2446380.js",
+    "main.js": "/React-Task-3/static/js/main.fd8d7c00.js",
     "static/js/787.c3321d7f.chunk.js": "/React-Task-3/static/js/787.c3321d7f.chunk.js",
     "static/media/background.png": "/React-Task-3/static/media/background.cd79c1da25f682a8de19.png",
     "static/media/bed.png": "/React-Task-3/static/media/bed.56a0baa8f3360e43db2d.png",
@@ -20,11 +20,11 @@
     "static/media/img8.png": "/React-Task-3/static/media/img8.a8f7e8f1f525d74a9af5.png",
     "index.html": "/React-Task-3/index.html",
     "main.7414e7e1.css.map": "/React-Task-3/static/css/main.7414e7e1.css.map",
-    "main.b2446380.js.map": "/React-Task-3/static/js/main.b2446380.js.map",
+    "main.fd8d7c00.js.map": "/React-Task-3/static/js/main.fd8d7c00.js.map",
     "787.c3321d7f.chunk.js.map": "/React-Task-3/static/js/787.c3321d7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7414e7e1.css",
-    "static/js/main.b2446380.js"
+    "static/js/main.fd8d7c00.js"
   ]
 }
