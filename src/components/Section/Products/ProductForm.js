@@ -62,7 +62,9 @@ function ProductForm(props) {
     discountBlurHandler,
     discountReset,
   ] = useInput(
-    (discount) => 1 <= parseFloat(discount) && parseFloat(discount) < 100
+    (discount) =>
+      discount.toString().trim().length === 0 ||
+      (1 <= parseInt(discount) && parseInt(discount) < 100)
   );
   const [imageState, setImageState] = useState({
     image: productToBeEdited ? productToBeEdited.Image : "",
@@ -77,7 +79,7 @@ function ProductForm(props) {
     setDiscount(productToBeEdited.Discount ? productToBeEdited.Discount : "");
   }
 
-  let formValid = nameValid && descriptionValid && priceValid;
+  let formValid = nameValid && descriptionValid && priceValid && discountValid;
 
   //   const nameReference = useRef();
   //   const altReference = useRef();
@@ -112,7 +114,7 @@ function ProductForm(props) {
       product = { ...product, new: "true" };
     }
     if (discount.toString().trim().length !== 0) {
-      product = { ...product, discount: parseFloat(discount) };
+      product = { ...product, discount: parseInt(discount) };
     }
 
     if (productToBeEdited) {
@@ -226,6 +228,7 @@ function ProductForm(props) {
         </div>
       </fieldset>
       <Input
+        className={`${!discountValid && classes.invalid}`}
         name="Discount"
         input={{
           placeholder: "Discount Percentage (1-99)",
@@ -239,6 +242,9 @@ function ProductForm(props) {
         onBlur={discountBlurHandler}
         // ref={discountReference}
       />
+      {!discountValid && (
+        <p className={classes["error-text"]}>Invalid Discount</p>
+      )}
       <Input
         className={`${!imageState.valid && classes.invalid}`}
         name="Image"
