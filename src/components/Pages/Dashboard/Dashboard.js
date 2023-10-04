@@ -131,7 +131,7 @@ function Dashboard(props) {
           </div>
         </Modal>
       )}
-      <div className="container-fluid px-5 pb-5">
+      <div className={`container-fluid px-5 pb-5 ${classes["limit-height"]}`}>
         <div className="container-fluid d-flex justify-content-center my-5">
           <Button className="w-25" text="New Product" onClick={addHandler} />
         </div>

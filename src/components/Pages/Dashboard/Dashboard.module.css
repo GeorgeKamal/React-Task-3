@@ -1,0 +1,8 @@
+.limit-height {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.limit-height::-webkit-scrollbar {
+  display: none;
+}
