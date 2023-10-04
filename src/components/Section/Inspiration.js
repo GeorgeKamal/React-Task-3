@@ -45,10 +45,10 @@ function Inspiration(props) {
                     <img src={room2} alt="room" className="img-fluid" />
                   </div>
                   <div className="col-12">
-                    <RadioButton className="m-0 px-2" name="photos" id="photo1" value="photo1" checked="true" />
-                    <RadioButton className="m-0 px-2" name="photos" id="photo2" value="photo2" />
-                    <RadioButton className="m-0 px-2" name="photos" id="photo3" value="photo3" />
-                    <RadioButton className="m-0 px-2" name="photos" id="photo4" value="photo4" />
+                    <RadioButton className="m-0 pe-2" name="photos" id="photo1" value="photo1" checked="true" />
+                    <RadioButton className="m-0 pe-2" name="photos" id="photo2" value="photo2" />
+                    <RadioButton className="m-0 pe-2" name="photos" id="photo3" value="photo3" />
+                    <RadioButton className="m-0 pe-2" name="photos" id="photo4" value="photo4" />
                   </div>
                 </div>
               </div>
