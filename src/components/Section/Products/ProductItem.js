@@ -14,12 +14,13 @@ function ProductItem(props) {
   })}`;
   return (
     <div className="col-12 col-lg-3 col-md-6 text-center pb-4">
-      <div className="bg-image hover-overlay shadow-1-strong">
+      <div className="bg-image hover-overlay shadow-1-strong d-flex flex-column h-100">
         <div style={{ position: "relative" }}>
           <img
             src={props.item.src}
             alt={props.item.alt}
             className="img-fluid w-100"
+            style={{ height: "350px" }}
           />
           <div style={{ position: "absolute", top: "10%", right: "10%" }}>
             {(props.item.discount || props.item.new) && (
@@ -42,23 +43,23 @@ function ProductItem(props) {
           </div>
         </div>
         <div
-          className="card-body px-3 pt-3 pb-4"
+          className="card-body px-3 pt-3 pb-4 d-flex flex-column"
           style={{ backgroundColor: "#f4f5f7" }}
         >
-          <h5 className="card-title text-start card-title-poppins">
-            {props.item.name}
-          </h5>
-          <p className="card-text text-start card-subtitle-poppins">
-            {props.item.description}
-          </p>
-          <h6 className="card-title d-flex justify-content-between card-price-poppins">
-            {props.item.discount ? discountPrice : price}
-            {props.item.discount && (
-              <strike className="card-price-old-poppins">
-                {price}
-              </strike>
-            )}
-          </h6>
+          <div className="my-auto">
+            <h5 className="card-title text-start card-title-poppins">
+              {props.item.name}
+            </h5>
+            <p className="card-text text-start card-subtitle-poppins">
+              {props.item.description}
+            </p>
+            <h6 className="card-title d-flex justify-content-between card-price-poppins">
+              {props.item.discount ? discountPrice : price}
+              {props.item.discount && (
+                <strike className="card-price-old-poppins">{price}</strike>
+              )}
+            </h6>
+          </div>
         </div>
         <Overlay />
       </div>
