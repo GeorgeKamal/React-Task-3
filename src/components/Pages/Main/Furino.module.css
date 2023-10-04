@@ -1,6 +1,6 @@
 .furino {
   height: 90vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .furino::-webkit-scrollbar {
   display: none;
