@@ -9,14 +9,14 @@ import classes from "./Furino.module.css";
 
 function Furino(props) {
   return (
-    <>
+    <div className={classes.furino}>
       <Main />
       <Browse />
       <Products />
       <Inspiration />
       <Share />
       <Footer />
-    </>
+    </div>
   );
 }
 

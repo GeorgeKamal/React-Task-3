@@ -12,7 +12,6 @@ import Dashboard from "./components/Pages/Dashboard/Dashboard";
 import ProductProvider from "./store/ProductProvider";
 
 function App() {
-  
   return (
     <HashRouter>
       <Navbar />

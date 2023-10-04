@@ -1,0 +1,7 @@
+.furino {
+  height: 90vh;
+  overflow-y: scroll;
+}
+.furino::-webkit-scrollbar {
+  display: none;
+}
