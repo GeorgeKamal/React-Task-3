@@ -3,6 +3,8 @@
   overflow-y: scroll;
 }
 
-.limit-height::-webkit-scrollbar {
-  display: none;
-}
+/**
+  .limit-height::-webkit-scrollbar {
+    display: none;
+  }
+*/
