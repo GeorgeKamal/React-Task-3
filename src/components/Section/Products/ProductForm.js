@@ -12,7 +12,7 @@ import ProductContext from "../../../store/product-context";
 const validateText = (text) => text.trim().length !== 0;
 
 function ProductForm(props) {
-  // const context = useContext(ProductContext)
+  const context = useContext(ProductContext)
   const [firstLoad, setFirstLoad] = useState(true);
   let productToBeEdited;
   if (props.content) {
@@ -119,9 +119,9 @@ function ProductForm(props) {
 
     if (productToBeEdited) {
       product = { ...product, alt: alt };
-      props.onEdit(product);
+      context.editProduct(props.ID, product);
     } else {
-      props.onAdd(product);
+      context.addProduct(product);
     }
 
     nameReset();

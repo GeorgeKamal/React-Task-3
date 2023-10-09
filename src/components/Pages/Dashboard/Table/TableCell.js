@@ -8,11 +8,11 @@ import ProductForm from "../../../Section/Products/ProductForm";
 import Icon from "../../../UI/Icon";
 
 function TableCell(props) {
-  // const context = useContext(ProductContext);
-  const [editing, setEditing] = useState(false);
+  const context = useContext(ProductContext);
   const [confirm, setConfirm] = useState(false);
+  const [editing, setEditing] = useState(false);
 
-  const editHandler = () => {
+  const editingHandler = () => {
     setEditing((previousState) => !previousState);
   };
 
@@ -41,7 +41,7 @@ function TableCell(props) {
     <td key={`cell${props.rowNumber}modify`} className={classes["cell-item"]}>
       {!confirm && (
         <>
-          <ButtonOutline className="me-1" text="Edit" onClick={editHandler} />
+          <ButtonOutline className="" text="Edit" onClick={editingHandler} />
           <Button
             text="Delete"
             // onClick={context.deleteProduct.bind(null, props.ID)}
@@ -56,7 +56,7 @@ function TableCell(props) {
             className="mx-1"
             text="Yes"
             // onClick={context.deleteProduct.bind(null, props.ID)}
-            onClick={props.onDelete}
+            onClick={context.deleteProduct.bind(null, props.ID)}
           />
           <ButtonOutline
             className="mx-1 px-3"
@@ -71,7 +71,7 @@ function TableCell(props) {
   return (
     <>
       {editing && (
-        <Modal onClick={editHandler}>
+        <Modal onClick={editingHandler}>
           <p
             className="m-0 p-3"
             style={{ backgroundColor: "#b88e2f", color: "white" }}
@@ -79,8 +79,9 @@ function TableCell(props) {
             Editing Product with ID: {props.ID}
           </p>
           <ProductForm
-            onClick={editHandler}
-            onEdit={props.onEdit.bind(null, props.ID)}
+            onClick={editingHandler}
+            edit
+            ID={props.ID}
             content={props.content}
           />
         </Modal>

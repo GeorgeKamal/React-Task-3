@@ -69,6 +69,8 @@ function Footer(props) {
                     style={{
                       borderRadius: "0",
                       borderColor: "black",
+                      border: "1px solid black", 
+                      boxSizing: "border-box"
                     }}
                     placeholder="Enter Your Email Address"
                   />
@@ -82,6 +84,8 @@ function Footer(props) {
                       borderRadius: "0",
                       color: "black",
                       borderColor: "black",
+                      border: "1px solid black", 
+                      boxSizing: "border-box"
                     }}
                   >
                     SUBSCRIBE

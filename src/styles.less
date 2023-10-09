@@ -15,13 +15,21 @@ body {
   line-height: 24px;
 }
 
-.bold-underlined:hover {
-  border-radius: 0 !important;
-  border-bottom: 3px solid #000000 !important;
-  font-weight: bold !important;
+.bold-underlined {
+  // border: 3px solid transparent;
+  box-sizing: border-box;
+
+  &:hover {
+    border-radius: 0 !important;
+    border-bottom: 3px solid #000000 !important;
+    font-weight: bold !important;
+  }
 }
 
 .bold-underlined2 {
+  // border: 3px solid transparent;
+  box-sizing: border-box;
+
   &:hover,
   &:focus {
     border-radius: 0 !important;
