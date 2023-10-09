@@ -32,7 +32,7 @@ function TableCell(props) {
         )}
       {props.content[key] &&
         props.content[key].toString().startsWith("data:image/png;base64,") && (
-          <img src={props.content[key]} className="img-fluid w-100" />
+          <img src={props.content[key]} className="img-fluid w-100" style={{height: "200px"}} />
         )}
     </td>
   ));
