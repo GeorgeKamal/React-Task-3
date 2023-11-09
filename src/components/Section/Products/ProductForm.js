@@ -4,15 +4,16 @@ import Input from "../../Input/Input";
 import Button from "../../UI/Buttons/Button";
 import ButtonOutline from "../../UI/Buttons/ButtonOutline";
 import RadioButton from "../../UI/Buttons/RadioButton";
-import classes from "./ProductForm.module.css";
+
 import useInput from "../../../hooks/use-input";
-import axios from "axios";
 import ProductContext from "../../../store/product-context";
+
+import classes from "./ProductForm.module.css";
 
 const validateText = (text) => text.trim().length !== 0;
 
 function ProductForm(props) {
-  const context = useContext(ProductContext)
+  const context = useContext(ProductContext);
   const [firstLoad, setFirstLoad] = useState(true);
   let productToBeEdited;
   if (props.content) {
@@ -57,7 +58,6 @@ function ProductForm(props) {
     discount,
     setDiscount,
     discountValid,
-    discountError,
     discountChangeHandler,
     discountBlurHandler,
     discountReset,

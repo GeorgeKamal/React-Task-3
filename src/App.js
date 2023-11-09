@@ -1,31 +1,24 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  createBrowserRouter,
-  HashRouter,
-} from "react-router-dom";
-import "./App.css";
+import { Suspense, lazy } from "react";
+import { Routes, Route, HashRouter } from "react-router-dom";
+
 import Navbar from "./components/Section/Navbar";
-import Furino from "./components/Pages/Main/Furino";
-import Dashboard from "./components/Pages/Dashboard/Dashboard";
-import ProductProvider from "./store/ProductProvider";
+import Loader from "./components/UI/Loader";
+
+import "./App.css";
+
+const Furino = lazy(() => import("./components/Pages/Main/Furino"));
+const Dashboard = lazy(() => import("./components/Pages/Dashboard/Dashboard"));
 
 function App() {
   return (
     <HashRouter>
       <Navbar />
-      <Routes>
-        <Route index element={<Furino />} />
-        <Route
-          path="/dashboard"
-          element={
-            <ProductProvider>
-              <Dashboard />
-            </ProductProvider>
-          }
-        />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route index element={<Furino />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Suspense>
     </HashRouter>
   );
 }

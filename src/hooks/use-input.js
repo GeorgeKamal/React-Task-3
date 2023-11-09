@@ -36,7 +36,7 @@ function useInput(validationFunction) {
       type: "SET_INPUT",
       input: input,
     });
-  }
+  };
 
   const inputChangeHandler = (event) => {
     inputDispatch({

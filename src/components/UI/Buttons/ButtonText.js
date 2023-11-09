@@ -1,5 +1,3 @@
-import classes from "./ButtonText.module.css";
-
 function ButtonText(props) {
   return (
     <a

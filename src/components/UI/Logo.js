@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import logo from "../../assets/logo.png";
-import classes from "./Logo.module.css";
 
 function Logo(props) {
-  const navigate = useNavigate();
-  const navigationHandler = () => {
-    navigate("/");
-  };
+  // const navigate = useNavigate();
+  // const navigationHandler = () => {
+  //   navigate("/");
+  // };
 
   return (
     <Link to="/" className="navbar-brand">

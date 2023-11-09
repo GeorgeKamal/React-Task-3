@@ -1,6 +1,5 @@
 import ButtonOutline from "../Buttons/ButtonOutline";
 import ButtonOverlay from "../Buttons/ButtonOverlay";
-import classes from "./Overlay.module.css";
 
 function Overlay(props) {
   return (

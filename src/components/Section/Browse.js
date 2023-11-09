@@ -1,7 +1,6 @@
 import dining from "../../assets/dining.png";
 import living from "../../assets/living.png";
 import bed from "../../assets/bed.png";
-import classes from "./Browse.module.css";
 import HoverImage from "../UI/Overlays/HoverImage";
 
 function Browse(props) {
@@ -34,7 +33,7 @@ function Browse(props) {
       </div>
       <div className="container-lg px-5">
         <div className="row">
-        <HoverImage className="col-12 col-lg-4 text-center">
+          <HoverImage className="col-12 col-lg-4 text-center">
             <img src={dining} alt="Dining Room" className="img-fluid mb-4" />
             <p
               className="text-center"

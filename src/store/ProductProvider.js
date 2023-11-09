@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 
 import ProductContext from "../store/product-context";
 import axios from "axios";
@@ -41,7 +41,7 @@ function ProductProvider(props) {
           `${process.env.REACT_APP_DATABASE_LINK}/products.json`,
           data
         );
-        const newProduct = { [response.data.name]: data };
+        // const newProduct = { [response.data.name]: data };
         // console.log(products);
         // setProducts((previousState) => ({
         //   newProduct,

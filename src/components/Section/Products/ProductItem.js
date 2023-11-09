@@ -1,7 +1,4 @@
-import ButtonOutline from "../../UI/Buttons/ButtonOutline";
-import ButtonOverlay from "../../UI/Buttons/ButtonOverlay";
 import Overlay from "../../UI/Overlays/Overlay";
-import classes from "./ProductItem.module.css";
 
 function ProductItem(props) {
   const currency = "Rp";

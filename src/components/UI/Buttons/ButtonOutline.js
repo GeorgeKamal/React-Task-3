@@ -1,5 +1,3 @@
-import classes from "./ButtonOutline.module.css";
-
 function ButtonOutline(props) {
   return (
     <div

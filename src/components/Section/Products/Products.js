@@ -1,4 +1,3 @@
-import classes from "./Products.module.css";
 import ProductList from "./ProductList";
 
 function Products(props) {

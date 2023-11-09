@@ -1,4 +1,3 @@
-import classes from "./ButtonOverlay.module.css";
 import Icon from "../Icon";
 
 function ButtonOverlay(props) {

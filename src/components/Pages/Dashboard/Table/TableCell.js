@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
+
 import Button from "../../../UI/Buttons/Button";
 import ButtonOutline from "../../../UI/Buttons/ButtonOutline";
-import classes from "./TableCell.module.css";
 import ProductContext from "../../../../store/product-context";
 import Modal from "../../../UI/Overlays/Modal";
 import ProductForm from "../../../Section/Products/ProductForm";
 import Icon from "../../../UI/Icon";
+
+import classes from "./TableCell.module.css";
 
 function TableCell(props) {
   const context = useContext(ProductContext);
@@ -32,7 +34,12 @@ function TableCell(props) {
         )}
       {props.content[key] &&
         props.content[key].toString().startsWith("data:image/png;base64,") && (
-          <img src={props.content[key]} className="img-fluid w-100" style={{height: "200px"}} />
+          <img
+            src={props.content[key]}
+            alt={props.content["Alt Name"]}
+            className="img-fluid w-100"
+            style={{ height: "200px" }}
+          />
         )}
     </td>
   ));

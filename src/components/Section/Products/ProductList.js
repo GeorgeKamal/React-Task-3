@@ -1,9 +1,9 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
-import ProductItem from "./ProductItem";
-import axios from "axios";
+import { useState, useEffect, useCallback } from "react";
 
-import classes from "./ProductList.module.css";
+import ProductItem from "./ProductItem";
 import ButtonOutline from "../../UI/Buttons/ButtonOutline";
+
+import axios from "axios";
 
 function ProductList(props) {
   const [maxProducts, setMaxProducts] = useState(4);

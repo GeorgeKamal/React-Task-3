@@ -1,12 +1,10 @@
-import { useState, useEffect, useCallback, useMemo, useContext } from "react";
-import classes from "./Table.module.css";
+import { useMemo, useContext } from "react";
+
 import TableHeader from "./TableHeader";
 import TableCell from "./TableCell";
-
-import axios from "axios";
 import ProductContext from "../../../../store/product-context";
-import ProductForm from "../../../Section/Products/ProductForm";
-import Modal from "../../../UI/Overlays/Modal";
+
+import classes from "./Table.module.css";
 
 function Table(props) {
   const context = useContext(ProductContext);

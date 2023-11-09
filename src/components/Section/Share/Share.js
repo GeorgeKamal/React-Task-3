@@ -1,7 +1,5 @@
 import Collage from "./Collage";
 
-import classes from "./Share.module.css";
-
 function Share(props) {
   return (
     <section className="mb-5" style={{ overflow: "hidden" }}>

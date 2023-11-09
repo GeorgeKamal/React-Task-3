@@ -1,16 +1,17 @@
-import { useState, useContext, useCallback, useEffect } from "react";
+import { useContext } from "react";
+
 import ProductProvider from "../../../store/ProductProvider";
 import ProductContext from "../../../store/product-context";
 import ProductForm from "../../Section/Products/ProductForm";
 import Button from "../../UI/Buttons/Button";
-import classes from "./Dashboard.module.css";
 import Table from "./Table/Table";
 import Modal from "../../UI/Overlays/Modal";
-import axios from "axios";
+
+import classes from "./Dashboard.module.css";
 
 function Dashboard(props) {
   document.title = "Dashboard";
-  const context = useContext(ProductContext)
+  const context = useContext(ProductContext);
 
   return (
     <>
@@ -58,13 +59,20 @@ function Dashboard(props) {
       )}
       <div className={`container-fluid px-5 pb-5 ${classes["limit-height"]}`}>
         <div className="container-fluid d-flex justify-content-center my-5">
-          <Button className="w-25" text="New Product" onClick={context.toggleAdding} />
+          <Button
+            className="w-25"
+            text="New Product"
+            onClick={context.toggleAdding}
+          />
         </div>
-        <Table
-        />
+        <Table />
       </div>
     </>
   );
 }
-
-export default Dashboard;
+export const DashBoardExport = () => (
+  <ProductProvider>
+    <Dashboard />
+  </ProductProvider>
+);
+export default DashBoardExport;

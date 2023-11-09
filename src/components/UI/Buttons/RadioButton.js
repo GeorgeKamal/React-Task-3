@@ -1,5 +1,3 @@
-import classes from "./RadioButton.module.css";
-
 const RadioButton = (props) => {
   return (
     <div

@@ -1,6 +1,6 @@
-import background from "../../assets/background.png";
 import Button from "../UI/Buttons/Button";
-import classes from "./Main.module.css";
+
+import background from "../../assets/background.png";
 
 function Main(props) {
   return (
