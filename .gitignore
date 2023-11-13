@@ -16,6 +16,7 @@ github.js
 
 # production
 /build
+/src/backups
 
 # misc
 .DS_Store

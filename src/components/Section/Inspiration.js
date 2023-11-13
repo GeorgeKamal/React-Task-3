@@ -2,8 +2,8 @@ import RadioButton from "../UI/Buttons/RadioButton";
 import Button from "../UI/Buttons/Button";
 
 import HoverImage from "../UI/Overlays/HoverImage";
-import room1 from "../../assets/room1.png";
-import room2 from "../../assets/room2.png";
+import room1 from "../../assets/room1.webp";
+import room2 from "../../assets/room2.webp";
 
 function Inspiration(props) {
   return (

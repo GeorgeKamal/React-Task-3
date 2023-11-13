@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins";
   overflow-y: hidden;
+  font-display: swap;
 }
 body::-webkit-scrollbar {
   display: none;

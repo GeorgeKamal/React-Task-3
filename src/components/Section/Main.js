@@ -1,12 +1,13 @@
 import Button from "../UI/Buttons/Button";
 
-import background from "../../assets/background.png";
+import background from "../../assets/background.webp";
 
 function Main(props) {
   return (
     <section>
       <div className="overlay mb-8">
         <img
+          fetchpriority="high"
           id="background"
           src={background}
           alt="background"

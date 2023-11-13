@@ -1,6 +1,6 @@
-import dining from "../../assets/dining.png";
-import living from "../../assets/living.png";
-import bed from "../../assets/bed.png";
+import dining from "../../assets/dining.webp";
+import living from "../../assets/living.webp";
+import bed from "../../assets/bed.webp";
 import HoverImage from "../UI/Overlays/HoverImage";
 
 function Browse(props) {
