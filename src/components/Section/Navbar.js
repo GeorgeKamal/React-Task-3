@@ -16,20 +16,21 @@ function Navbar(props) {
           <Logo />
         </div>
         <div className="d-flex d-lg-none col-4 col-lg-6 justify-content-around gap-0">
-          <a className="navbar-brand" href="Account">
+          <a className="navbar-brand" aria-label="Account" href="Account">
             <Icon iconName="bi bi-person" />
           </a>
-          <a className="navbar-brand" href="Search">
+          <a className="navbar-brand" aria-label="Search" href="Search">
             <Icon iconName="bi bi-search" />
           </a>
-          <a className="navbar-brand" href="Wishlist">
+          <a className="navbar-brand" aria-label="Wishlist" href="Wishlist">
             <Icon iconName="bi bi-heart" />
           </a>
-          <a className="navbar-brand" href="Cart">
+          <a className="navbar-brand" aria-label="Cart" href="Cart">
             <Icon iconName="bi bi-cart" />
           </a>
         </div>
         <button
+          aria-label="More Links"
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -60,16 +61,16 @@ function Navbar(props) {
             </li>
           </ul>
           <div className="d-none d-lg-flex col-lg-3 justify-content-end gap-4">
-            <a className="navbar-brand" href="Account">
+            <a className="navbar-brand" aria-label="Account" href="Account">
               <Icon iconName="bi bi-person" />
             </a>
-            <a className="navbar-brand" href="Search">
+            <a className="navbar-brand" aria-label="Search" href="Search">
               <Icon iconName="bi bi-search" />
             </a>
-            <a className="navbar-brand" href="Wishlist">
+            <a className="navbar-brand" aria-label="Wishlist" href="Wishlist">
               <Icon iconName="bi bi-heart" />
             </a>
-            <a className="navbar-brand" href="Cart">
+            <a className="navbar-brand" aria-label="Cart" href="Cart">
               <Icon iconName="bi bi-cart" />
             </a>
           </div>

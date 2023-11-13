@@ -1,19 +1,10 @@
 import Button from "../UI/Buttons/Button";
 
-import background from "../../assets/background.webp";
-
 function Main(props) {
   return (
     <section>
       <div className="overlay mb-8">
-        <img
-          fetchpriority="high"
-          id="background"
-          src={background}
-          alt="background"
-          className="img-fluid mx-auto d-flex"
-          style={{ width: "100%", height: "90vh" }}
-        />
+        <div id="background" />
         <div className="overlay-text mx-auto px-4 py-5 d-flex">
           <div className="row">
             <div className="col-12">

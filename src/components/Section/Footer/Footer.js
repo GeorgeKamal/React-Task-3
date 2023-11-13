@@ -9,7 +9,7 @@ function Footer(props) {
         <footer>
           <div className="row">
             <div className="col-12 col-lg-4 mb-3 mb-lg-5 text-center text-lg-start">
-              <h5
+              <h1
                 className="text-black mb-4 mb-lg-5"
                 style={{
                   fontWeight: "700",
@@ -18,7 +18,7 @@ function Footer(props) {
                 }}
               >
                 Furino.
-              </h5>
+              </h1>
               <p
                 className="m-0"
                 style={{
@@ -51,12 +51,12 @@ function Footer(props) {
 
             <div className="col-12 col-lg-4 mb-3">
               <form>
-                <h5
+                <h1
                   className="mb-3 mb-lg-5 normal-poppins"
                   style={{ color: "#9f9f9f" }}
                 >
                   Newsletter
-                </h5>
+                </h1>
                 <div className="d-flex flex-sm-row w-100 gap-2">
                   <label htmlFor="newsletter" className="visually-hidden">
                     Email address

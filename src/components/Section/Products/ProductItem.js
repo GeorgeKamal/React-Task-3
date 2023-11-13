@@ -17,7 +17,7 @@ function ProductItem(props) {
             src={props.item.src}
             alt={props.item.alt}
             className="img-fluid w-100"
-            style={{ height: "350px" }}
+            style={{ height: "350px", objectFit: "cover" }}
           />
           <div style={{ position: "absolute", top: "10%", right: "10%" }}>
             {(props.item.discount || props.item.new) && (
@@ -44,18 +44,18 @@ function ProductItem(props) {
           style={{ backgroundColor: "#f4f5f7" }}
         >
           <div className="my-auto">
-            <h5 className="card-title text-start card-title-poppins">
+            <h1 className="card-title text-start card-title-poppins">
               {props.item.name}
-            </h5>
+            </h1>
             <p className="card-text text-start card-subtitle-poppins">
               {props.item.description}
             </p>
-            <h6 className="card-title d-flex justify-content-between card-price-poppins">
+            <h2 className="card-title d-flex justify-content-between card-price-poppins">
               {props.item.discount ? discountPrice : price}
               {props.item.discount && (
                 <strike className="card-price-old-poppins">{price}</strike>
               )}
-            </h6>
+            </h2>
           </div>
         </div>
         <Overlay />

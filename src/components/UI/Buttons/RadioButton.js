@@ -6,6 +6,7 @@ const RadioButton = (props) => {
       }`}
     >
       <input
+        aria-label={props.id}
         className="radio-button"
         type="radio"
         name={props.name}

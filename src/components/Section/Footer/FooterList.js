@@ -20,9 +20,9 @@ function FooterList(props) {
     <div className="col-6 col-lg-2 d-flex d-lg-inline justify-content-center justify-content-lg-center mb-4">
       <ul className="nav flex-column gap-2 gap-lg-5">
         <li className="nav-item">
-          <h5 className="normal-poppins" style={{ color: "#9f9f9f" }}>
+          <h2 className="normal-poppins" style={{ color: "#9f9f9f" }}>
             {props.title}
-          </h5>
+          </h2>
         </li>
         {content}
       </ul>
