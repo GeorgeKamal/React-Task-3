@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-Task-3/static/css/main.ebfb82d2.css",
+    "main.css": "/React-Task-3/static/css/main.467a59d2.css",
     "main.js": "/React-Task-3/static/js/main.4078f2db.js",
     "static/css/485.fb407d30.chunk.css": "/React-Task-3/static/css/485.fb407d30.chunk.css",
     "static/js/485.38592d04.chunk.js": "/React-Task-3/static/js/485.38592d04.chunk.js",
@@ -27,7 +27,7 @@
     "static/media/img8.webp": "/React-Task-3/static/media/img8.7a33a0db420261d1b6da.webp",
     "static/media/logo.webp": "/React-Task-3/static/media/logo.c95abf695630d1150a49.webp",
     "index.html": "/React-Task-3/index.html",
-    "main.ebfb82d2.css.map": "/React-Task-3/static/css/main.ebfb82d2.css.map",
+    "main.467a59d2.css.map": "/React-Task-3/static/css/main.467a59d2.css.map",
     "main.4078f2db.js.map": "/React-Task-3/static/js/main.4078f2db.js.map",
     "485.fb407d30.chunk.css.map": "/React-Task-3/static/css/485.fb407d30.chunk.css.map",
     "485.38592d04.chunk.js.map": "/React-Task-3/static/js/485.38592d04.chunk.js.map",
@@ -39,7 +39,7 @@
     "87.cf642d17.chunk.js.map": "/React-Task-3/static/js/87.cf642d17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebfb82d2.css",
+    "static/css/main.467a59d2.css",
     "static/js/main.4078f2db.js"
   ]
 }
