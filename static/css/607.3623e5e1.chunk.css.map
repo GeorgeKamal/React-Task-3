@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/607.3623e5e1.chunk.css","mappings":"AAAA,uBACE,WAAY,CACZ,eACF","sources":["components/Pages/Main/Furino.module.css"],"sourcesContent":[".furino {\r\n  height: 90vh;\r\n  overflow-y: auto;\r\n}\r\n\r\n/**\r\n  .furino::-webkit-scrollbar {\r\n    display: none;\r\n  }\r\n*/\r\n"],"names":[],"sourceRoot":""}
