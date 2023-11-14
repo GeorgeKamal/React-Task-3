@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import imageCompression from "browser-image-compression";
 
 import Input from "../../Input/Input";
 import Button from "../../UI/Buttons/Button";
@@ -58,6 +59,7 @@ function ProductForm(props) {
     discount,
     setDiscount,
     discountValid,
+    discountError,
     discountChangeHandler,
     discountBlurHandler,
     discountReset,
@@ -92,8 +94,8 @@ function ProductForm(props) {
   const submitHandler = (event) => {
     event.preventDefault();
     let imageValid =
-      imageState.image.startsWith("data:image/png;base64,") &&
-      imageState.image.length > "data:image/png;base64,".length;
+      imageState.image.startsWith("data:image/webp;base64,") &&
+      imageState.image.length > "data:image/webp;base64,".length;
     setImageState((previousState) => ({
       ...previousState,
       valid: imageValid,
@@ -142,12 +144,18 @@ function ProductForm(props) {
       setImageState({
         image: reader.result,
         valid:
-          reader.result.startsWith("data:image/png;base64,") &&
-          reader.result.trim().length > "data:image/png;base64,".trim().length,
+          reader.result.startsWith("data:image/webp;base64,") &&
+          reader.result.trim().length > "data:image/webp;base64,".trim().length,
       });
       // console.log("RESULT", reader.result);
     };
-    reader.readAsDataURL(file);
+    imageCompression(file, {
+      fileType: "image/webp",
+      initialQuality: 0.95,
+    }).then((x) => {
+      const compressedFile = new File([x], "test.webp", { type: "image/webp" });
+      reader.readAsDataURL(compressedFile);
+    });
   };
 
   const altChangeHandler = (event) => {
