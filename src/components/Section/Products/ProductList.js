@@ -1,35 +1,24 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useContext } from "react";
 
+import ProductContext from "../../../store/product-context";
 import ProductItem from "./ProductItem";
 import ButtonOutline from "../../UI/Buttons/ButtonOutline";
-
-import axios from "axios";
 
 function ProductList(props) {
   const [maxProducts, setMaxProducts] = useState(4);
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState(false);
-
-  const fetchProducts = useCallback(async () => {
-    try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_DATABASE_LINK}/products.json`
-      );
-      setAllProducts(maxProducts >= Object.keys(response.data).length);
-      const productsList = Object.keys(response.data)
-        .slice(0, maxProducts)
-        .map((productID) => (
-          <ProductItem key={productID} item={response.data[productID]} />
-        ));
-      setProducts(productsList);
-    } catch (error) {
-      console.log(error);
-    }
-  }, [maxProducts]);
+  const context = useContext(ProductContext);
 
   useEffect(() => {
-    fetchProducts();
-  }, [fetchProducts]);
+    setAllProducts(maxProducts >= Object.keys(context.products).length);
+    const productsList = Object.keys(context.products)
+      .slice(0, maxProducts)
+      .map((productID) => (
+        <ProductItem key={productID} item={context.products[productID]} />
+      ));
+    setProducts(productsList);
+  }, [context, maxProducts]);
 
   const clickHandler = () => {
     setMaxProducts((previousState) => previousState + 4);

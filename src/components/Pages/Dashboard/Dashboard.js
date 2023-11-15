@@ -1,6 +1,5 @@
 import { useContext } from "react";
 
-import ProductProvider from "../../../store/ProductProvider";
 import ProductContext from "../../../store/product-context";
 import ProductForm from "../../Section/Products/ProductForm";
 import Button from "../../UI/Buttons/Button";
@@ -70,9 +69,4 @@ function Dashboard(props) {
     </>
   );
 }
-export const DashBoardExport = () => (
-  <ProductProvider>
-    <Dashboard />
-  </ProductProvider>
-);
-export default DashBoardExport;
+export default Dashboard;

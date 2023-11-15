@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, HashRouter } from "react-router-dom";
 
+import ProductProvider from "./store/ProductProvider";
 import Navbar from "./components/Section/Navbar";
 import Loader from "./components/UI/Loader";
 
@@ -14,10 +15,12 @@ function App() {
     <HashRouter>
       <Navbar />
       <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route index element={<Furino />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+        <ProductProvider>
+          <Routes>
+            <Route index element={<Furino />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </ProductProvider>
       </Suspense>
     </HashRouter>
   );

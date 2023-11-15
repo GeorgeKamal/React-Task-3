@@ -21,11 +21,11 @@ function TableCell(props) {
   let content = Object.keys(props.content).map((key, index) => (
     <td key={`cell${props.rowNumber}${index}`} className={classes["cell-item"]}>
       {props.content[key] &&
-        !props.content[key].toString().startsWith("data:image/png;base64,") &&
+        !props.content[key].toString().startsWith("data:image/webp;base64,") &&
         key !== "New" &&
         props.content[key]}
       {props.content[key] &&
-        !props.content[key].toString().startsWith("data:image/png;base64,") &&
+        !props.content[key].toString().startsWith("data:image/webp;base64,") &&
         key === "New" && (
           <Icon
             iconName="bi bi-check-square-fill"
@@ -33,12 +33,12 @@ function TableCell(props) {
           />
         )}
       {props.content[key] &&
-        props.content[key].toString().startsWith("data:image/png;base64,") && (
+        props.content[key].toString().startsWith("data:image/webp;base64,") && (
           <img
             src={props.content[key]}
             alt={props.content["Alt Name"]}
             className="img-fluid w-100"
-            style={{ height: "200px" }}
+            style={{ height: "200px", objectFit: "cover" }}
           />
         )}
     </td>
