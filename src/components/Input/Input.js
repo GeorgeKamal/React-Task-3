@@ -27,7 +27,7 @@ const Input = React.forwardRef((props, ref) => {
           <textarea
             className="form-control"
             id={props.name}
-            rows="2"
+            rows="3"
             ref={reference}
             value={props.value}
             onChange={props.onChange}

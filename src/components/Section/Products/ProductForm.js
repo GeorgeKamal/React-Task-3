@@ -257,14 +257,14 @@ function ProductForm(props) {
         className={`${!imageState.valid && classes.invalid}`}
         name="Image"
         onChange={imageHandler}
-        input={{ type: "file" }}
+        input={{ type: "file", accept:"image/*" }}
         // onChange={imageChangeHandler}
         // onBlur={imageBlurHandler}
       />
       {!imageState.valid && (
         <p className={classes["error-text"]}>Invalid Image</p>
       )}
-      <div className="form-group row">
+      <div className="form-group row pt-3">
         <div className="container-fluid d-flex justify-content-end">
           <Button
             onClick={submitHandler}
